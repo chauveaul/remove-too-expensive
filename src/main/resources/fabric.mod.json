@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "removetooexpensive",
+  "version": "${version}",
+  "name": "RemoveTooExpensive",
+  "description": "Removes the "
+  Too
+  Expensive
+  " feature in anvils",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/removetooexpensive/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.chauveaul.removetooexpensive.client.RemovetooexpensiveClient"
+    ],
+    "main": [
+      "com.chauveaul.removetooexpensive.Removetooexpensive"
+    ]
+  },
+  "mixins": [
+    "removetooexpensive.mixins.json",
+    {
+      "config": "removetooexpensive.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
